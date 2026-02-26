@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Hiep Huynh — Resume Website" />
+  <title>Hiep Huynh | Resume</title>
+
+  <script>
+    (function () {
+      const t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <!-- Brand + Avatar -->
+      <div class="brand">
+        <button class="avatar" id="avatarBtn" type="button" aria-label="Change avatar">
+          <img id="avatarImg" src="hiep.png" alt="Avatar" />
+          <span class="avatar-ring" aria-hidden="true"></span>
+        </button>
+        <input id="avatarInput" type="file" accept="image/*" hidden />
+
+        <div class="brand-text">
+          <div class="name">Hiep Huynh</div>
+          <span class="sub">Huỳnh Văn Hiệp • Resume Website</span>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <nav aria-label="Primary navigation" class="nav">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#references">References</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button class="btn" id="themeBtn" type="button" title="Toggle theme (T)">
+          Theme <span class="kbd">T</span>
+        </button>
+        <button class="btn" id="printBtn" type="button" title="Print / Save as PDF (P)">
+          Print <span class="kbd">P</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-inner">
+        <div>
+          <h1>Hiep Huynh</h1>
+          <p>
+            M.Sc. student in Information Technology and software engineer with hands-on experience in software development and R&amp;D.
+            I also work on academic research, LaTeX typesetting, and scientific publishing.
+          </p>
+
+          <div class="hero-badges" aria-label="Highlights">
+            <span class="pill">Email: <strong id="emailText">hiephuynh.hut@gmail.com</strong></span>
+            <span class="pill">English: intermediate (reading / writing / speaking)</span>
+            <span class="pill">Location: Ho Chi Minh City, Vietnam</span>
+          </div>
+
+          <div class="contact-row">
+            <a class="btn primary" href="mailto:hiephuynh.hut@gmail.com">Email me</a>
+            <button class="btn" id="copyEmailBtn" type="button">Copy email</button>
+            <a class="btn" href="cV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+          </div>
+
+          <div class="small muted" id="toast" style="display:none;margin-top:8px"></div>
+        </div>
+
+       <div class="hero-right">
+          <button class="hero-avatar" id="heroAvatarBtn" type="button" aria-label="Change avatar">
+            <span class="hero-avatar-ring" aria-hidden="true"></span>
+            <img id="heroAvatarImg" src="hiep.png" alt="Avatar" />
+            <!-- <span class="hero-avatar-fallback" aria-hidden="true">HH</span> -->
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW LAYOUT: Main center + Sidebar right -->
+    <div class="layout">
+      <!-- MAIN (center) -->
+      <div class="main">
+        <section class="card" id="education">
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="titem">
+              <div class="when">2024–Present</div>
+              <div>
+                <h3>M.Sc. in Information Technology</h3>
+                <div class="meta">Faculty of Information Technology — Ho Chi Minh City University of Technology (HUTECH), Vietnam</div>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="when">2020–2024</div>
+              <div>
+                <h3>B.Eng. in Information Technology</h3>
+                <div class="meta">Faculty of Information Technology — Ho Chi Minh City University of Technology (HUTECH), Vietnam</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="experience">
+          <h2>Work Experience</h2>
+          <p class="muted small" style="margin-top:-6px">
+            In parallel with my academic work, I have gained practical industry experience in software engineering and R&amp;D.
+          </p>
+
+          <div class="timeline" style="margin-top:10px">
+            <div class="titem">
+              <div class="when">2025–Present</div>
+              <div>
+                <h3>Engineer — TVT Medical Joint Stock Company</h3>
+                <div class="meta">473 Lac Long Quan St., Ward 5, District 11, Ho Chi Minh City, Vietnam</div>
+                <ul>
+                  <li>Contributed to engineering tasks across <strong>software/system development</strong>.</li>
+                  <li>Collaborated with teams to deliver <strong>stable</strong> and <strong>maintainable</strong> solutions.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="when">2024–2025</div>
+              <div>
+                <h3>R&amp;D Staff — Biexce Technology Investment &amp; Solutions Co., Ltd.</h3>
+                <div class="meta">No. 8 Hoa Hong St., Cau Kieu Ward, Ho Chi Minh City, Vietnam</div>
+                <ul>
+                  <li>Supported <strong>research and development</strong> activities for internal products.</li>
+                  <li>Prototyped solutions and assisted with <strong>testing</strong> and <strong>validation</strong>.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="when">2023–2024</div>
+              <div>
+                <h3>Programmer — Mekongnet Co., Ltd.</h3>
+                <div class="meta">181 Cao Thang St., Ward 12, District 10, Ho Chi Minh City, Vietnam</div>
+                <ul>
+                  <li>Developed and maintained software modules; implemented <strong>new features</strong>.</li>
+                  <li>Fixed bugs and supported <strong>deployment</strong> and <strong>documentation</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Publications becomes CENTER + wider + grid 2 columns -->
+         <section class="card" id="publications">
+          <h2>Publications</h2>
+
+          <ol class="publist pubgrid" id="pubList">
+            <li class="pub-card" data-text="2025 efficient multi-class classification granular ball twin support vector machine journal of computer science and cybernetics huynh bui nguyen">
+              <div class="pub-head">
+                <span class="pub-year">2025</span>
+                <span class="pub-title">Efficient multi-class classification with granular ball twin support vector machine using novel decomposition strategies.</span>
+              </div>
+              <div class="pub-venue">Journal of Computer Science and Cybernetics.</div>
+              <div class="pub-auth muted small">Huynh, H.; Nguyen, H. C.; Bui, Q.-T.</div>
+            </li>
+
+            <li class="pub-card" data-text="2025 reliability-enhanced approach neighborhood-aware possibilistic semi-supervised fuzzy clustering 17th international conference on knowledge and systems engineering">
+              <div class="pub-head">
+                <span class="pub-year">2025</span>
+                <span class="pub-title">A reliability-enhanced approach for neighborhood-aware possibilistic semi-supervised fuzzy clustering.</span>
+              </div>
+              <div class="pub-venue">The 17th International Conference on Knowledge and Systems Engineering.</div>
+              <div class="pub-auth muted small">Huynh, H.; Nguyen, H. C.; Bui, Q.-T.</div>
+            </li>
+
+            <li class="pub-card" data-text="2025 enhanced traffic sign recognition yolo lightweight polygon-based lane detection eai goodtechs 2025 vietnam">
+              <div class="pub-head">
+                <span class="pub-year">2025</span>
+                <span class="pub-title">Enhanced Traffic Sign Recognition on Multi-Speed Expressways in Vietnam Using YOLO and Lightweight Polygon-Based Lane Detection.</span>
+              </div>
+              <div class="pub-venue">EAI GOODTECHS 2025, Ho Chi Minh City, Vietnam.</div>
+              <div class="pub-auth muted small">Nguyen, H.-L.; Ngo, M.-P.; Huynh, H.; Bui, Q.-T.</div>
+            </li>
+
+            <li class="pub-card" data-text="2025 novel approach metaheuristic-driven threshold optimization frequent high-order pattern mining mets world scientific">
+              <div class="pub-head">
+                <span class="pub-year">2025</span>
+                <span class="pub-title">A Novel Approach to Metaheuristic-Driven Threshold Optimization in Frequent High-Order Pattern Mining.</span>
+              </div>
+              <div class="pub-venue">METS, World Scientific Publishing Company.</div>
+              <div class="pub-auth muted small">Tran, M.-T.; Huynh, H.; Nguyen, D. Q.; Nguyen, M.; Bui, Q.-T.*</div>
+            </li>
+
+            <li class="pub-card" data-text="2026 cnn vision transformer hybrid framework brain tumor mri image classification journal of science and technology development accepted in press vietnam national university ho chi minh city">
+              <div class="pub-head">
+                <span class="pub-year">2026</span>
+                <span class="pub-title">A CNN-Vision Transformer Hybrid Framework for Brain Tumor MRI Image Classification.</span>
+              </div>
+              <div class="pub-venue">Journal of Science and Technology Development (VNU-HCM), accepted (in press).</div>
+              <div class="pub-auth muted small">Nguyen, T.-N.; Huynh, H.; Van Hieu, D.; Nguyen, T.-S.; Tran, S.-T.; Bui, Q.-T.*</div>
+            </li>
+          </ol>
+        </section>
+      </div>
+
+      <!-- SIDEBAR (right) -->
+      <aside class="sidebar">
+        <section class="card" id="skills">
+          <h2>Skills</h2>
+
+          <div class="skill-group">
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Languages</div>
+              <div class="skill-row">
+                <span class="tag">English</span>
+                <span class="tag muted">Intermediate (reading, writing, speaking)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Coding</div>
+              <div class="skill-row">
+                <span class="tag">Python</span>
+                <span class="tag">C#</span>
+                <span class="tag">HTML &amp; CSS</span>
+                <span class="tag">Java</span>
+                <span class="tag">Matlab</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Databases</div>
+              <div class="skill-row">
+                <span class="tag">SQL Server</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">MySQL</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Productivity</div>
+              <div class="skill-row">
+                <span class="tag">Microsoft Excel</span>
+                <span class="tag">Word</span>
+                <span class="tag">PowerPoint</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Miscellaneous</div>
+              <div class="skill-row">
+                <span class="tag">Academic research</span>
+                <span class="tag">LaTeX typesetting</span>
+                <span class="tag">Publishing</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Certifications</h2>
+          <div class="titem" style="grid-template-columns: 90px 1fr">
+            <div class="when">2024</div>
+            <div>
+              <h3 style="margin:0;font-size:14px">Professional Pedagogical Certificate</h3>
+              <div class="meta">Grade: Excellent — HUTECH University, Vietnam</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="references">
+          <h2>References</h2>
+          <div class="titem" style="grid-template-columns: 1fr; gap:8px">
+            <div>
+              <h3 style="margin:0;font-size:14px">Dr. Quang-Thinh Bui</h3>
+              <div class="meta">Faculty of Education and Basic Sciences — Tien Giang University</div>
+              <div class="meta">119 Ap Bac, Ward 5, My Tho City, Dong Thap Province, Vietnam</div>
+              <div style="margin-top:8px">
+                <a class="btn" href="mailto:buiquangthinh@tgu.edu.vn">buiquangthinh@tgu.edu.vn</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Hiep Huynh — Resume Website.
+    </footer>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
